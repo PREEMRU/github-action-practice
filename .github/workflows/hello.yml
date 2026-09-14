@@ -1,0 +1,14 @@
+name: Say Hello
+
+on: push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v7
+
+      - name: Print greeting
+        run: make say-hello
